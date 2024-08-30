@@ -60,7 +60,7 @@ class Loader(Dataset):
 
 
         # Label is the screen coordinate (x, y)
-        label = np.array(image_info['gt']) # label for upna multi gaze, gt for EVE
+        label = np.array(image_info['gt']) 
         class_label = assign_cluster(points = np.expand_dims(label,0))[0]
         resolution = np.array([1920,1080])
         label_final = np.array([label[0]/resolution[0], label[1]/resolution[1]], dtype=float)
